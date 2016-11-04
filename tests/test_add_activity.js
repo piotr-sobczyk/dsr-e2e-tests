@@ -2,9 +2,9 @@ var utils = require("../utils");
 
 module.exports = {
 
-    //before: function() {
-    //    utils.cleanDatabase();
-    //},
+    before: function() {
+        utils.cleanDatabase();
+    },
 
     'Login as admin' : function (browser) {
         var globals = browser.globals;
