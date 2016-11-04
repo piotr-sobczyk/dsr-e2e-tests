@@ -1,22 +1,5 @@
 module.exports = {
-	
-	'test 1' : function(browser){
-		var globals = browser.globals;
-		
-		browser.page.workerLoginPage()
-            .navigate()
-            .login(globals.worker000337Username);
-			
-		browser.page.workerLoginPage().logout()
-		console.log(browser.launchUrl)
-		browser
-			.url("http://sfc.dsr.com.pl")
-			
-        browser.page.loginPage()            
-            .login(globals.masterUsername, globals.masterPassword)
-	},
-	
-/* 
+
     'Login as worker' : function (browser) {
         var globals = browser.globals;
 
@@ -48,15 +31,16 @@ module.exports = {
 	
 	'Logout worker' : function (browser) {
  		browser.page.workerLoginPage().logout()
+		browser.pause(5000)
 	},
 	
 	'Login as master' : function (browser) {
         var globals = browser.globals;
 
 		browser
-			.url(globals.launchUrl)
+			.url(browser.launchUrl)
 		
-        browser.page.loginPage()            
+        browser.page.loginPage()           
             .login(globals.masterUsername, globals.masterPassword)			
 	},
 	
@@ -87,6 +71,6 @@ module.exports = {
 	
 	'Login check if no machine activity exists' : function (browser) {
 		browser
-			.assert.attributeEquals('#endAllMA', 'disabled', 'disabled')
-	} */
+			.assert.attributeEquals('#endAllMA', 'disabled', "true")
+	}
 }
