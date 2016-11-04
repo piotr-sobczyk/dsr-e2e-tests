@@ -11,7 +11,8 @@ module.exports = {
       "log_path" : "output/",
       "port" : 4444,
       "cli_args" : {
-        "webdriver.chrome.driver" : "selenium/chromedriver-mac"
+        //"webdriver.chrome.driver" : "selenium/chromedriver-mac"
+        "webdriver.chrome.driver" : "selenium/chromedriver.exe"
       }
     },
 
