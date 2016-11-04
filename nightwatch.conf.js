@@ -1,8 +1,9 @@
-{
+module.exports = {
     "src_folders" : ["tests"],
     "output_folder" : "output/reports",
 
     "custom_assertions_path": "extensions/asserts",
+    "page_objects_path" : "pageObjects",
 
     "selenium" : {
       "start_process" : true,
@@ -10,7 +11,7 @@
       "log_path" : "output/",
       "port" : 4444,
       "cli_args" : {
-        "webdriver.chrome.driver" : "selenium/chromedriver.exe"
+        "webdriver.chrome.driver" : "selenium/chromedriver-mac"
       }
     },
 
@@ -20,9 +21,28 @@
         "selenium_port": 4444,
         "selenium_host": "localhost",
         "silent": true,
+        "globals": {
+          "adminUsername": "dj",
+          "adminPassword": "dj"
+        },
         "desiredCapabilities": {
           "browserName": "chrome"
         }
+      },
+
+      "local": {
+          "launch_url": "http://localhost/",
+          "selenium_port": 4444,
+          "selenium_host": "localhost",
+          "silent": true,
+          "globals": {
+              "adminUsername": "dj1",
+              "adminPassword": "dj1"
+          },
+          "desiredCapabilities": {
+              "browserName": "chrome"
+          }
       }
+
     }
 }
