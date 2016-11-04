@@ -24,7 +24,10 @@ module.exports = {
         "silent": true,
         "globals": {
           "adminUsername": "dj",
-          "adminPassword": "dj"
+          "adminPassword": "dj",
+		  "worker000337Username": "000337",
+          "masterUsername": "pb1",
+          "masterPassword": "pb1",		  
         },
         "desiredCapabilities": {
           "browserName": "chrome"
